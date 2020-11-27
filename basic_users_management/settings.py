@@ -94,9 +94,9 @@ WSGI_APPLICATION = 'basic_users_management.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'test_db',
+        'NAME': os.environ.get('NAME')
         'USER': 'postgres',
-        'PASSWORD': '123456',
+        'PASSWORD': os.environ.get('PASSWORD')
         'HOST': 'localhost',
     }
 }
